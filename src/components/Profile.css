@@ -1,78 +1,136 @@
-/* src/components/Profile.css */
+/* Profile.css */
 .profile-container {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    background-color: #f5f5f5;
-    padding: 20px;
-  }
-  
-  .sidebar {
-    width: 250px;
-    background-color: #2e3b4e;
-    padding: 20px;
-    color: white;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar li {
-    margin: 20px 0;
-    cursor: pointer;
-  }
-  
-  .sidebar li:hover {
-    text-decoration: underline;
-  }
-  
-  .profile-content {
-    flex-grow: 1;
-    padding: 20px;
-  }
-  
-  .profile-info {
-    margin-bottom: 40px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  .profile-update {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  h2, h3 {
-    margin-bottom: 20px;
-  }
-  
-  form label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  input, select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.pegasus {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+/* Profile content - Stack layout */
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 270px; /* Space for sidebar */
+  padding: 20px;
+  align-items: center; /* Center items horizontally */
+}
+
+/* Update Profile section */
+.profile-update {
+  width: 100%;
+  max-width: 500px; /* Set maximum width for centering */
+  margin-bottom: 30px; /* Space below the update profile section */
+  text-align: left; /* Ensure text is left-aligned */
+}
+
+/* User profile info section */
+.profile-info {
+  width: 100%;
+  max-width: 500px; /* Set maximum width for centering */
+  text-align: left; /* Align text to the left */
+  margin-bottom: 30px; /* Space below the user profile section */
+}
+
+/* Center titles */
+.profile-info h2,
+.profile-update h3 {
+  text-align: center; /* Center the titles */
+}
+
+.profile-info h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.profile-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Update Profile specific styles */
+.profile-update h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.profile-update form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Ensure items are left-aligned */
+  width: 100%; /* Full width of the form container */
+}
+
+.profile-update form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+  width: 100%; /* Label takes full width */
+}
+
+/* Set input fields to full width */
+.profile-update input[type="text"],
+.profile-update input[type="email"],
+.profile-update select {
+  width: 100%; /* Input fields take full width of the container */
+  padding: 8px; /* Add padding for better appearance */
+  margin-bottom: 15px; /* Space between inputs */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  text-align: left; /* Align text to the left inside inputs */
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
